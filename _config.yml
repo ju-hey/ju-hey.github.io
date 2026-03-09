@@ -298,8 +298,14 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: true # 포스팅 페이지 왼쪽 프로필 활성화
       read_time: true
       comments: # true
       share: true
       related: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true # 일반 페이지 왼쪽 프로필 활성화
