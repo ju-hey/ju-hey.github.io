@@ -115,7 +115,7 @@ analytics:
 # Site Author
 author:
   name             : "JU-HEY(주헤이)"
-  avatar           : # 프로필 이미지 경로 (예: /assets/images/bio-photo.jpg)
+  avatar           : "/assets/images/ju-hey_profile_20260309.png" # 프로필 이미지 경로 (예: /assets/images/bio-photo.jpg)
   bio              : "여행, 게임, 그리고 사소한 기록들을 담는 공간입니다."
   location         : "Seoul"
   email            :
