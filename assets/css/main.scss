@@ -1,25 +1,29 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-search: false
+# Jekyll이 이 파일을 처리하도록 빈 프런트 매터를 넣어줍니다.
+search: false # search: false 설정이 필요 없다면 아래처럼 대시만 남겨두어도 무방합니다.
 ---
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+/* 테마 기본 스킨 및 설정 로드 */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; 
+@import "minimal-mistakes"; 
 
-/* 관련 글(Related Posts) 영역 너비 보정 */
+/* -----------------------------------------------------------
+   [커스텀] 관련 글(Related Posts) 영역 레이아웃 보정
+   ----------------------------------------------------------- */
 .page__related {
-  clear: both; // 주변 요소의 영향을 받지 않도록 초기화
+  clear: both; // 주변 요소와 겹치지 않게 분리
   float: none !important;
   width: 100% !important;
-  margin-top: 2em;
-  
-  /* 카드들이 좁은 창에서 1열로 쌓이게 강제 */
+  margin-top: 3em; // 본문과의 간격 확보
+
+  /* 화면이 좁아질 때(태블릿, 모바일) 카드 정렬 방식 강제 변경 */
   .grid__item {
     @media (max-width: 1024px) {
-      width: 100% !important;
+      width: 100% !important; // 실처럼 좁아지는 현상 방지 (100% 너비 차지)
       margin-left: 0 !important;
+      margin-bottom: 1em; // 카드 사이 간격 추가
     }
   }
 }
