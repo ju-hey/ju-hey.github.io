@@ -1,12 +1,15 @@
-# main links
+# 메인 상단 메뉴 설정
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "✈️ 여행"
+    url: /categories/travel/
+  - title: "🎮 게임"
+    url: /categories/game/
+  - title: "📝 일/메모"
+    url: /categories/memo/
+
+# 하단 정보 메뉴 설정 (저자 상세 정보 연결)
+footer_links:
+  - title: "About JU-HEY"
+    url: /about/
+  - title: "GitHub"
+    url: https://github.com/ju-hey
