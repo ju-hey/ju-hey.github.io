@@ -643,6 +643,8 @@ ko: &DEFAULT_KO
   back_to_top                : "맨 위로 이동"
 ko-KR:
   related_label: "함께 읽어볼 만한 기록들"
+  breadcrumb_home_label: "홈"
+  more_label: "더 보기"
   <<: *DEFAULT_KO
 
 # Russian / Русский
