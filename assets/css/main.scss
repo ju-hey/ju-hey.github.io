@@ -1,6 +1,6 @@
 ---
 # Jekyll이 이 파일을 처리하도록 빈 프런트 매터를 넣어줍니다.
-search: false # search: false 설정이 필요 없다면 아래처럼 대시만 남겨두어도 무방합니다.
+search: false
 ---
 
 @charset "utf-8";
@@ -10,20 +10,40 @@ search: false # search: false 설정이 필요 없다면 아래처럼 대시만 
 @import "minimal-mistakes"; 
 
 /* -----------------------------------------------------------
-   [커스텀] 관련 글(Related Posts) 영역 레이아웃 보정
+   [커스텀] 관련 글(Related Posts) 레이아웃 및 썸네일 보정
    ----------------------------------------------------------- */
+
+/* 1. 영역 너비 및 반응형 대응 */
 .page__related {
-  clear: both; // 주변 요소와 겹치지 않게 분리
+  clear: both;           // 사이드바 아래로 영역 강제 밀어내기
   float: none !important;
   width: 100% !important;
-  margin-top: 3em; // 본문과의 간격 확보
+  margin-top: 3em;
 
-  /* 화면이 좁아질 때(태블릿, 모바일) 카드 정렬 방식 강제 변경 */
+  /* 화면이 좁아질 때(1024px 이하) 실처럼 좁아지는 현상 방지 */
   .grid__item {
     @media (max-width: 1024px) {
-      width: 100% !important; // 실처럼 좁아지는 현상 방지 (100% 너비 차지)
+      width: 100% !important; 
       margin-left: 0 !important;
-      margin-bottom: 1em; // 카드 사이 간격 추가
+      margin-bottom: 1.5em; 
     }
   }
+}
+
+/* 2. 썸네일 이미지 크기 및 비율 고정 (티스토리 카드형 스타일) */
+.page__related .grid__item .archive__item-teaser {
+  height: 150px;         /* 높이 고정 */
+  overflow: hidden;      /* 넘치는 이미지 커팅 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; 
+  border-radius: 4px;    /* 모서리 살짝 둥글게 (선택 사항) */
+}
+
+.page__related .grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* 이미지가 일그러지지 않게 꽉 채움 */
+  margin-bottom: 0;
 }
