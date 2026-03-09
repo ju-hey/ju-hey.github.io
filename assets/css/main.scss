@@ -7,3 +7,19 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* 관련 글(Related Posts) 영역 너비 보정 */
+.page__related {
+  clear: both; // 주변 요소의 영향을 받지 않도록 초기화
+  float: none !important;
+  width: 100% !important;
+  margin-top: 2em;
+  
+  /* 카드들이 좁은 창에서 1열로 쌓이게 강제 */
+  .grid__item {
+    @media (max-width: 1024px) {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+}
