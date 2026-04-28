@@ -1,0 +1,620 @@
+
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.28.0 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    
+<meta charset="utf-8">
+
+
+<!-- begin _includes/seo.html --><title>페이지를 찾을 수 없습니다 | ju-hey.log</title>
+<meta name="description" content="요청하신 페이지가 존재하지 않습니다.">
+
+
+  <meta name="author" content="JU-HEY(주헤이)">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="ju-hey.log">
+<meta property="og:title" content="페이지를 찾을 수 없습니다">
+<meta property="og:url" content="https://ju-hey.github.io/404.html">
+
+
+  <meta property="og:description" content="요청하신 페이지가 존재하지 않습니다.">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://ju-hey.github.io/404.html">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="O5Av_-AT3LHepLq4FDrRzdzUByiUP6EDbFd3NUG2jmI" />
+
+
+
+
+
+  <meta name="naver-site-verification" content="356642dc2b7d716c16830fbfe09e537636f520b9">
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- favicon -->
+
+
+
+
+
+  <link rel="icon" href="/assets/images/favicon-preset-star.svg" type="image/svg+xml">
+
+
+<!-- likes: 명시적으로 false일 때만 끔. site-settings 없으면 기존처럼 로드 -->
+
+
+
+  <script src="/assets/js/likes.js" defer></script>
+
+
+
+<script id="blogInteractionLock">
+  document.addEventListener("DOMContentLoaded", function () {
+    document.documentElement.classList.add("no-select");
+
+    document.addEventListener("contextmenu", function (event) {
+      if (event.target && event.target.closest && event.target.closest(".masthead")) return;
+      event.preventDefault();
+    });
+  });
+</script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    
+<nav class="skip-links" aria-label="Skip links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+        
+        <a class="site-title" href="/">
+          ju-hey.log
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+                  <a href="/travel/">Travel</a>
+                </li><li class="masthead__menu-item">
+                  <a href="/review/">Review</a>
+                </li><li class="masthead__menu-item">
+                  <a href="/memo/">Memo</a>
+                </li><li class="masthead__menu-item">
+                  <a href="/picks/">Picks</a>
+                </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- THE ULTIMATE HEADER SCRIPT -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const masthead = document.querySelector('.masthead');
+  if (!masthead) return;
+
+  let isHidden = false;
+  let hideTimer = null;
+
+  const showHeader = () => {
+    if (isHidden) {
+      masthead.classList.remove('is-hidden');
+      isHidden = false;
+    }
+  };
+
+  const hideHeader = () => {
+    if (!isHidden && window.scrollY > 50) {
+      masthead.classList.add('is-hidden');
+      isHidden = true;
+    }
+  };
+
+  const resetHideTimer = () => {
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      hideHeader();
+    }, 2000);
+  };
+
+  window.addEventListener('scroll', () => {
+    showHeader();
+    if (window.scrollY > 50) {
+      resetHideTimer();
+    } else {
+      clearTimeout(hideTimer);
+    }
+  }, { passive: true });
+
+  document.addEventListener('mousemove', (e) => {
+    if (e.clientY <= 30) {
+      showHeader();
+      if (window.scrollY > 50) resetHideTimer();
+    }
+  });
+
+  masthead.addEventListener('mouseenter', () => {
+    clearTimeout(hideTimer);
+    showHeader();
+  });
+  masthead.addEventListener('mouseleave', () => {
+    if (window.scrollY > 50) resetHideTimer();
+  });
+});
+</script>
+<!-- /THE ULTIMATE HEADER SCRIPT -->
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+
+
+
+
+<div id="main" class="single-main-grid" role="main">
+  
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="페이지를 찾을 수 없습니다">
+    <meta itemprop="description" content="요청하신 페이지가 존재하지 않습니다.">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header class="page__header">
+          
+          <div class="page__header-content">
+            <div class="page__title-row">
+              <h1 id="page-title" class="page__title p-name" itemprop="headline">
+                <a href="https://ju-hey.github.io/404.html" itemprop="url">페이지를 찾을 수 없습니다
+</a>
+              </h1>
+
+              
+            </div>
+
+            <div class="page__header-meta">
+              
+
+  
+
+  
+
+
+              
+
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>요청하신 페이지가 존재하지 않거나 이동되었습니다.</p>
+
+<p><a href="/">홈으로 돌아가기</a> · <a href="/travel/">여행 글 보기</a> · <a href="/picks/">Picks 글 보기</a></p>
+
+        
+      </section>
+
+      
+
+
+
+<div class="post-actions-bar">
+  
+    
+    
+    
+    <button class="post-like-btn" data-like-post="_pages/404.md" aria-label="Like this post">
+      <svg class="like-heart" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+      <span class="like-count"></span>
+    </button>
+  
+
+  
+</div>
+
+<style>
+  /* ── Actions bar: like (left) + share (right) ── */
+  .post-actions-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    clear: both;
+    padding-top: 1.5em;
+  }
+
+  /* ── Like button ── */
+  .post-like-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.38rem 0.6rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 999px;
+    background: #fff;
+    color: #94a3b8;
+    font-size: 0.7rem;
+    line-height: 1;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .post-like-btn.has-count { padding: 0.3rem 0.6rem; }
+  .post-like-btn:hover { border-color: #f87171; color: #f87171; }
+  .post-like-btn.liked { border-color: #f87171; color: #ef4444; }
+  .post-like-btn .like-heart { width: 16px; height: 16px; transition: transform 0.2s; }
+  .post-like-btn .like-count { display: inline-block; line-height: 1; font-variant-numeric: tabular-nums; }
+  .post-like-btn:active .like-heart { transform: scale(1.3); }
+  .like-count:empty { display: none; }
+
+  /* ── Share trigger button ── */
+  .post-share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #e2e8f0;
+    border-radius: 999px;
+    background: #fff;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .post-share-btn:hover { border-color: #64748b; color: #475569; }
+
+  /* ── Share modal overlay ── */
+  .share-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+  }
+  .share-modal-overlay.is-visible { display: flex; }
+
+  /* ── Share modal box ── */
+  .share-modal {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem 1.25rem;
+    width: 320px;
+    max-width: 90vw;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    animation: share-modal-in 0.2s ease-out;
+  }
+  @keyframes share-modal-in {
+    from { opacity: 0; transform: scale(0.95) translateY(8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .share-modal__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: #94a3b8;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+  }
+  .share-modal__close:hover { color: #334155; }
+  .share-modal__title {
+    margin: 0 0 1rem 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  .share-modal__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .share-modal__link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #334155;
+    text-decoration: none;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .share-modal__link:hover { background: #f1f5f9; border-color: #cbd5e1; }
+  .share-modal__link i,
+  .share-modal__link svg { flex-shrink: 0; font-size: 1.1rem; }
+  .share-modal__link--x:hover { color: #000; }
+  .share-modal__link--facebook:hover { color: #1877f2; }
+  .share-modal__link--linkedin:hover { color: #0a66c2; }
+  .share-modal__link--bluesky:hover { color: #0085ff; }
+  .share-modal__link--copy { font-family: inherit; }
+  .share-modal__link--copy:hover { color: #16a34a; }
+</style>
+
+
+      
+
+
+    </div>
+
+    
+  </article>
+
+  
+
+
+
+
+
+
+
+
+
+<aside class="page__right-visual" aria-label="Right sidebar visual area">
+  
+    <div class="right-rail-image rr-focus-center-right" role="img" aria-label="Right sidebar image" style="background-image: url('/assets/images/site/sidebar-right.jpg?v=1776269532');"></div>
+    
+      <div class="right-rail-credit">사진: <a href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%EB%93%A4%ED%8C%90%EC%97%90%EC%84%9C-%ED%92%80%EC%9D%84-%EB%9C%AF%EA%B3%A0-%EC%9E%88%EB%8A%94-%EC%96%91%EA%B3%BC-%EC%97%BC%EC%86%8C-%EB%96%BC-PPk4D9zCKoo?utm_source=unsplash&amp;amp;amp;amp;amp;amp;utm_medium=referral&amp;amp;amp;amp;amp;amp;utm_content=creditCopyText" rel="nofollow noopener noreferrer" target="_blank">Unsplash</a>의 <a href="https://unsplash.com/ko/@maihonhassan?utm_source=unsplash&amp;amp;amp;amp;amp;amp;utm_medium=referral&amp;amp;amp;amp;amp;amp;utm_content=creditCopyText" rel="nofollow noopener noreferrer" target="_blank">Najmul Hasan</a></div>
+    
+  
+</aside>
+
+  
+  
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.page__header');
+  const title = header ? header.querySelector('.page__title') : null;
+  if (!header || !title) return;
+
+  const maybeScrollFromCardEntry = () => {
+    let fromPostCard = false;
+    try {
+      fromPostCard = sessionStorage.getItem('juhey:post-card-nav') === '1';
+      sessionStorage.removeItem('juhey:post-card-nav');
+    } catch (_) {
+      fromPostCard = false;
+    }
+    if (!fromPostCard) return;
+
+    const sidebar = document.querySelector('.single-main-grid > .sidebar');
+    if (!sidebar) return;
+
+    const sidebarTop = sidebar.getBoundingClientRect().top;
+    const headerTop = header.getBoundingClientRect().top;
+    const isSidebarStackedOnTop = headerTop - sidebarTop > 80;
+    if (!isSidebarStackedOnTop) return;
+
+    const topPadding = 12;
+    const targetTop = Math.max(0, window.pageYOffset + header.getBoundingClientRect().top - topPadding);
+    window.scrollTo({ top: targetTop, behavior: 'auto' });
+  };
+
+  const syncHeaderHeight = () => {
+    header.style.setProperty('--page-header-extra-height', '0px');
+
+    const computed = window.getComputedStyle(title);
+    const lineHeight = parseFloat(computed.lineHeight);
+    if (!lineHeight || Number.isNaN(lineHeight)) return;
+
+    const titleHeight = title.getBoundingClientRect().height;
+    const lines = Math.max(1, Math.round(titleHeight / lineHeight));
+    const extraLines = Math.max(0, lines - 1);
+    const extraHeight = extraLines * lineHeight;
+
+    header.style.setProperty('--page-header-extra-height', `${extraHeight}px`);
+  };
+
+  syncHeaderHeight();
+  maybeScrollFromCardEntry();
+  window.addEventListener('resize', syncHeaderHeight, { passive: true });
+
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(syncHeaderHeight);
+    observer.observe(title);
+  }
+});
+</script>
+
+
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<div class="page__footer-font-credits" style="margin-top:0.5rem;font-size:0.625rem;color:#9ca3af;letter-spacing:0.02em;">
+  Font: <span style="font-family:'JejuMyeongjo',serif">제주명조체</span> (제주특별자치도), <span style="font-family:'MapoGoldenPier',cursive">마포금빛나루체</span> (마포구)
+</div>
+<!-- end custom footer snippets -->
+
+        
+
+
+
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://ju-hey.github.io">JU-HEY. All rights reserved.</a>. Built with <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3W5T5QKSFV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3W5T5QKSFV', { 'anonymize_ip': true});
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('click', function(event) {
+  const link = event.target.closest('a[data-post-card-nav="1"]');
+  if (!link) return;
+  if (event.defaultPrevented) return;
+  if (event.button !== 0) return;
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+  try {
+    sessionStorage.setItem('juhey:post-card-nav', '1');
+  } catch (_) {
+    // Ignore storage unavailability.
+  }
+});
+</script>
+
+  </body>
+</html>
