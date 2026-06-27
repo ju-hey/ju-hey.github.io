@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ju-hey.github.io/sitemap.xml
+Sitemap: https://ju-hey.github.io/sitemap-main.xml
+Sitemap: https://ju-hey.github.io/sitemap.txt
+Sitemap: https://ju-hey.github.io/sitemap-lite.xml
